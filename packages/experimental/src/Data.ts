@@ -306,7 +306,7 @@ export const Data: Schema.Schema<Data> = Schema.Union(
  * @category predicates
  *
  * @example
- * import { Data } from "@lucid-evolution/experimental";
+ * import { Data } from "@evolution-sdk/experimental";
  *
  * const value = Data.mkByte("deadbeef");
  * const isByte = Data.isByteArray(value); // true
@@ -321,7 +321,7 @@ export const isByteArray = Schema.is(ByteArray);
  * @category predicates
  *
  * @example
- * import { Data } from "@lucid-evolution/experimental";
+ * import { Data } from "@evolution-sdk/experimental";
  *
  * const value = Data.mkInt(42n);
  * const isInteger = Data.isInteger(value); // true
@@ -336,7 +336,7 @@ export const isInteger = Schema.is(Integer);
  * @category predicates
  *
  * @example
- * import { Data } from "@lucid-evolution/experimental";
+ * import { Data } from "@evolution-sdk/experimental";
  *
  * const value = Data.mkList([Data.mkInt(1n), Data.mkInt(2n)]);
  * const isList = Data.isList(value); // true
@@ -351,7 +351,7 @@ export const isList = Schema.is(List);
  * @category predicates
  *
  * @example
- * import { Data } from "@lucid-evolution/experimental";
+ * import { Data } from "@evolution-sdk/experimental";
  *
  * const value = Data.mkMap([
  *   { k: Data.mkByte("cafe01"), v: Data.mkInt(1n) },
@@ -369,7 +369,7 @@ export const isMap = Schema.is(Map);
  * @category predicates
  *
  * @example
- * import { Data } from "@lucid-evolution/experimental";
+ * import { Data } from "@evolution-sdk/experimental";
  *
  * const value = Data.mkConstr(0n, [Data.mkInt(1n), Data.mkInt(2n)]);
  * const isConstr = Data.isConstr(value); // true
@@ -384,7 +384,7 @@ export const isConstr = Schema.is(Constr);
  * @category encoding/decoding
  *
  * @example
- * import { Data, TSchema } from "@lucid-evolution/experimental"
+ * import { Data, TSchema } from "@evolution-sdk/experimental"
  *
  * const Token = TSchema.Struct({
  *  policyId: TSchema.ByteArray,
@@ -480,7 +480,7 @@ const toCMLPlutusData = (data: Data): CML.PlutusData.PlutusData => {
  * @category encoding/decoding
  *
  * @example
- * import { TSchema , Data } from "@lucid-evolution/experimental";
+ * import { TSchema , Data } from "@evolution-sdk/experimental";
  *
  * const Token = TSchema.Struct({
  *  policyId: TSchema.ByteArray,
@@ -647,7 +647,7 @@ export const resolveCBOR = Effect.fn(function* (input: string) {
  * @category encoding/decoding
  *
  * @example
- * import { Data, TSchema } from "@lucid-evolution/experimental";
+ * import { Data, TSchema } from "@evolution-sdk/experimental";
  *
  * const Token = TSchema.Struct({
  *   policyId: TSchema.ByteArray,
@@ -702,7 +702,7 @@ export const decodeDataEither = <Source, Target extends Data>(
  * @category encoding/decoding
  *
  * @example
- * import { Data , TSchema } from "@lucid-evolution/experimental";
+ * import { Data , TSchema } from "@evolution-sdk/experimental";
  *
  * const token : unknown = {
  *   policyId: "deadbeef",
@@ -755,7 +755,7 @@ export const encodeDataEither = <Source, Target extends Data>(
  * @category constructors
  *
  * @example
- * import { Data } from "@lucid-evolution/experimental";
+ * import { Data } from "@evolution-sdk/experimental";
  *
  * // Create a list with multiple elements of the same type
  * const integerList = Data.mkList([
@@ -783,7 +783,7 @@ export const mkList = <const T extends Data>(list: readonly T[]) =>
  * @category constructors
  *
  * @example
- * import { Data } from "@lucid-evolution/experimental";
+ * import { Data } from "@evolution-sdk/experimental";
  *
  * const myInteger = Data.mkInt(42n);
  *
@@ -798,7 +798,7 @@ export const mkInt = <const T extends bigint = bigint>(integer: T) =>
  * @category constructors
  *
  * @example
- * import { Data } from "@lucid-evolution/experimental";
+ * import { Data } from "@evolution-sdk/experimental";
  *
  * const myByteArray = Data.mkByte("deadbeef");
  *
@@ -813,7 +813,7 @@ export const mkByte = <const T extends string>(bytearray: T) =>
  * @category constructors
  *
  * @example
- * import { Data } from "@lucid-evolution/experimental";
+ * import { Data } from "@evolution-sdk/experimental";
  *
  * const myMap = Data.mkMap([
  *   { k: Data.mkByte("cafe01"), v: Data.mkInt(42n) },
@@ -832,7 +832,7 @@ export const mkMap = <const Pairs extends ReadonlyArray<{ k: Data; v: Data }>>(
  * @category constructors
  *
  * @example
- * import { Data } from "@lucid-evolution/experimental";
+ * import { Data } from "@evolution-sdk/experimental";
  *
  * // Create a constructor for a custom data type (e.g., a "Mint" action with amount)
  * const mint = Data.mkConstr(0n, [Data.mkInt(5n)]);
@@ -884,7 +884,7 @@ const reviver = (key: string, value: any) => {
  * @category transformation
  *
  * @example
- * import { Data } from "@lucid-evolution/experimental";
+ * import { Data } from "@evolution-sdk/experimental";
  *
  * const data = Data.mkInt(42n);
  * const json = Data.toJSON(data);
@@ -902,7 +902,7 @@ export const toJSON = (data: Data): string => {
  * @category transformation
  *
  * @example
- * import { Data } from "@lucid-evolution/experimental";
+ * import { Data } from "@evolution-sdk/experimental";
  *
  * @throws {Error} If the JSON string is invalid or does not match the expected format
  *
@@ -926,7 +926,7 @@ export const fromJSONOrThrow = (json: string): Data => {
  * @category equality
  *
  * @example
- * import { Data } from "@lucid-evolution/experimental";
+ * import { Data } from "@evolution-sdk/experimental";
  *
  * Data.isEqual(Data.mkInt(1n), Data.mkInt(1n)); // true
  * Data.isEqual(Data.mkInt(1n), Data.mkInt(2n)); // false
@@ -984,7 +984,7 @@ export const isEqual = (a: Data, b: Data): boolean => {
  * @category ordering
  *
  * @example
- * import { Data } from "@lucid-evolution/experimental";
+ * import { Data } from "@evolution-sdk/experimental";
  * import assert from "assert"
  *
  * Data.compare(Data.mkInt(1n), Data.mkInt(2n)); // -1
@@ -1090,7 +1090,7 @@ export const compare = (a: Data, b: Data): number => {
  * @category generators
  *
  * @example
- * import { Data } from "@lucid-evolution/experimental";
+ * import { Data } from "@evolution-sdk/experimental";
  * import { FastCheck } from "effect"
  *
  * const data = Data.genData(3);
@@ -1176,7 +1176,7 @@ export const genConstr = (depth: number): FastCheck.Arbitrary<Constr> =>
  * @category generators
  *
  * @example
- * import { Data } from "@lucid-evolution/experimental";
+ * import { Data } from "@evolution-sdk/experimental";
  * import { FastCheck } from "effect"
  *
  * const mapArb = Data.genMap(2);
@@ -1227,7 +1227,7 @@ export const genMap = (depth: number): FastCheck.Arbitrary<Map> => {
  * @category ordering
  *
  * @example
- * import { Data } from "@lucid-evolution/experimental";
+ * import { Data } from "@evolution-sdk/experimental";
  *
  * const data = Data.mkMap([
  *   { k: Data.mkByte("cafe"), v: Data.mkInt(2n) },

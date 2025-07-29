@@ -35,7 +35,7 @@ export const DATUM_HASH_HEX_LENGTH = 64;
  * Error class for DatumHash related operations.
  *
  * @example
- * import { DatumHash } from "@lucid-evolution/experimental";
+ * import { DatumHash } from "@evolution-sdk/experimental";
  * import assert from "assert";
  *
  * const error = new DatumHash.DatumHashError({ message: "Invalid datum hash" });
@@ -140,7 +140,7 @@ export const HexString = Schema.transform(Hash, DatumHash, {
  * Check if two DatumHash instances are equal.
  *
  * @example
- * import { DatumHash } from "@lucid-evolution/experimental";
+ * import { DatumHash } from "@evolution-sdk/experimental";
  * import { Schema } from "effect";
  * import assert from "assert";
  *
@@ -168,7 +168,7 @@ export const equals = (a: DatumHash, b: DatumHash): boolean => {
  * Generator for creating random DatumHash instances for testing
  *
  * @example
- * import { DatumHash } from "@lucid-evolution/experimental";
+ * import { DatumHash } from "@evolution-sdk/experimental";
  * import { FastCheck } from "effect";
  * import assert from "assert";
  *

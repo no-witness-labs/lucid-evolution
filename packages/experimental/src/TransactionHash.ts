@@ -30,7 +30,7 @@ export const TRANSACTIONHASH_HEX_LENGTH = 64;
  * Error class for TransactionHash related operations.
  *
  * @example
- * import { TransactionHash } from "@lucid-evolution/experimental";
+ * import { TransactionHash } from "@evolution-sdk/experimental";
  * import assert from "assert";
  *
  * const error = new TransactionHash.TransactionHashError({ message: "Invalid transaction hash" });
@@ -181,7 +181,7 @@ export const CBORHex = Schema.transformOrFail(
  * Check if two TransactionHash instances are equal.
  *
  * @example
- * import { TransactionHash } from "@lucid-evolution/experimental";
+ * import { TransactionHash } from "@evolution-sdk/experimental";
  * import assert from "assert";
  *
  * @since 2.0.0
@@ -194,7 +194,7 @@ export const equals = (a: TransactionHash, b: TransactionHash): boolean =>
  * Generate a random TransactionHash.
  *
  * @example
- * import { TransactionHash } from "@lucid-evolution/experimental";
+ * import { TransactionHash } from "@evolution-sdk/experimental";
  * import { FastCheck } from "effect";
  * import assert from "assert";
  *

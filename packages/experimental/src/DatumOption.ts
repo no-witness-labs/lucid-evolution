@@ -175,7 +175,7 @@ export const CBORHex = Schema.transformOrFail(
  * Checks if two datum options are equal.
  *
  * @example
- * import { DatumOption, DatumHash } from "@lucid-evolution/experimental";
+ * import { DatumOption, DatumHash } from "@evolution-sdk/experimental";
  * import { Schema } from "effect";
  * import assert from "assert";
  *
