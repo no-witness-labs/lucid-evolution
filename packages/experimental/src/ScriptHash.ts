@@ -21,7 +21,7 @@ export const SCRIPTHASH_HEX_LENGTH = 56;
  * Error class for ScriptHash related operations.
  *
  * @example
- * import { ScriptHash } from "@lucid-evolution/experimental";
+ * import { ScriptHash } from "@evolution-sdk/experimental";
  * import assert from "assert";
  *
  * const error = new ScriptHash.ScriptHashError({ message: "Invalid script hash" });
@@ -97,7 +97,7 @@ export const equals = (a: ScriptHash, b: ScriptHash): boolean =>
  * Generate a random ScriptHash.
  *
  * @example
- * import { ScriptHash } from "@lucid-evolution/experimental";
+ * import { ScriptHash } from "@evolution-sdk/experimental";
  * import { FastCheck } from "effect";
  * import assert from "assert";
  *

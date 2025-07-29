@@ -6,7 +6,7 @@ import {
   toUnit,
   unixTimeToSlot,
   validatorToAddress,
-} from "@lucid-evolution/utils";
+} from "@evolution-sdk/utils";
 import { Effect, Context, Layer, pipe, Console } from "effect";
 import {
   Data,
@@ -22,7 +22,7 @@ import {
   handleSubmit,
   withLogRetry,
 } from "../specs/utils";
-import { Emulator, generateEmulatorAccount } from "@lucid-evolution/provider";
+import { Emulator, generateEmulatorAccount } from "@evolution-sdk/provider";
 import { generateEmulatorAccountFrommPrivateKey } from "../../../provider/src";
 import scripts from "../specs/contracts/plutus.json";
 

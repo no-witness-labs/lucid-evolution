@@ -1,9 +1,9 @@
 import { CML } from "./core.js";
-import { fromHex, sleep } from "@lucid-evolution/core-utils";
+import { fromHex, sleep } from "@evolution-sdk/core-utils";
 import {
   applyDoubleCborEncoding,
   scriptFromNative,
-} from "@lucid-evolution/utils";
+} from "@evolution-sdk/utils";
 import {
   Address,
   Credential,
@@ -20,7 +20,7 @@ import {
   TxHash,
   Unit,
   UTxO,
-} from "@lucid-evolution/core-types";
+} from "@evolution-sdk/core-types";
 import packageJson from "../package.json" with { type: "json" };
 import * as _Blockfrost from "./internal/blockfrost.js";
 

@@ -13,16 +13,16 @@ import {
   UTxO,
   Wallet,
   WalletApi,
-} from "@lucid-evolution/core-types";
-import { fromHex, toHex } from "@lucid-evolution/core-utils";
+} from "@evolution-sdk/core-types";
+import { fromHex, toHex } from "@evolution-sdk/core-utils";
 import {
   coreToUtxo,
   credentialToRewardAddress,
   getAddressDetails,
   utxoToCore,
-} from "@lucid-evolution/utils";
+} from "@evolution-sdk/utils";
 import { CML } from "./core.js";
-import { signData } from "@lucid-evolution/sign_data";
+import { signData } from "@evolution-sdk/sign_data";
 import { discoverOwnUsedTxKeyHashes, walletFromSeed } from "./wallet.js";
 
 type Config = {

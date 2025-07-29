@@ -21,7 +21,7 @@ export class BytesError extends Data.TaggedError("BytesError")<{
  * Throws an Error if the assertion fails.
  *
  * @example
- * import { assert_bytes_unsafe } from "@lucid-evolution/experimental/Bytes";
+ * import { assert_bytes_unsafe } from "@evolution-sdk/experimental/Bytes";
  * assert_bytes_unsafe(new Uint8Array([1,2,3]), 3); // passes
  * assert_bytes_unsafe(new Uint8Array([1,2,3]), [2,4]); // passes
  * assert_bytes_unsafe(new Uint8Array([1,2,3]), { min: 2, max: 3 }); // passes
@@ -73,7 +73,7 @@ export const assert_bytes_or_throw = (
  * Fails with BytesError if the assertion fails.
  *
  * @example
- * import { assert_bytes } from "@lucid-evolution/experimental/Bytes";
+ * import { assert_bytes } from "@evolution-sdk/experimental/Bytes";
  * yield* assert_bytes(new Uint8Array([1,2,3]), 3); // passes
  * yield* assert_bytes(new Uint8Array([1,2,3]), [2,4]); // passes
  * yield* assert_bytes(new Uint8Array([1,2,3]), { min: 2, max: 3 }); // passes
@@ -249,7 +249,7 @@ export function fromTextUnsafe(text: string): string {
  * Checks if a string is a valid hexadecimal string (lowercase, even length).
  *
  * @example
- * import { isHex } from "@lucid-evolution/experimental/Bytes";
+ * import { isHex } from "@evolution-sdk/experimental/Bytes";
  * isHex("deadbeef"); // true
  * isHex("DEADBEEF"); // false
  * isHex("abc"); // false

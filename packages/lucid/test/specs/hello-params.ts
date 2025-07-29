@@ -5,9 +5,9 @@ import {
   applyParamsToScript,
   getAddressDetails,
   validatorToAddress,
-} from "@lucid-evolution/utils";
-import { Constr, Data } from "@lucid-evolution/plutus";
-import { fromText } from "@lucid-evolution/core-utils";
+} from "@evolution-sdk/utils";
+import { Constr, Data } from "@evolution-sdk/plutus";
+import { fromText } from "@evolution-sdk/core-utils";
 import { SpendingValidator } from "../../src/index.js";
 import scripts from "./contracts/plutus.json";
 import { handleSignSubmit, withLogRetry } from "./utils.js";

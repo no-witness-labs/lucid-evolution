@@ -70,7 +70,7 @@ const asciiToBase16 = (char: number): number => {
  * Converts a branded Hex string to a Uint8Array.
  *
  * @example
- * import { makeOrThrow, toBytes } from "@lucid-evolution/experimental/Hex";
+ * import { makeOrThrow, toBytes } from "@evolution-sdk/experimental/Hex";
  * const hex = makeOrThrow("deadbeef");
  * const bytes = toBytes(hex); // Uint8Array [222, 173, 190, 239]
  *
