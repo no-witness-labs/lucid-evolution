@@ -1,19 +1,3 @@
-//#region Backup Original
-// // @ts-ignore
-// const withNextra = require('nextra')({
-//   theme: 'nextra-theme-docs',
-//   themeConfig: './theme.config.jsx',
-//   defaultShowCopyCode: true,
-//   readingTime: true,
-// })
-
-// module.exports = withNextra({
-//   output: 'export',
-//   images: { unoptimized: true },
-//   basePath: "/evolution-sdk",
-// })
-//#endregion
-
 import nextra from "nextra";
 
 const withNextra = nextra({
@@ -36,7 +20,7 @@ const withNextra = nextra({
 });
 
 export default withNextra({
-  basePath: "/evolution-sdk",
+  basePath: "/lucid-evolution",
   images: {
     unoptimized: true,
   },

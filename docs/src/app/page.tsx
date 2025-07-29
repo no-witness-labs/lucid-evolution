@@ -18,7 +18,7 @@ const IndexPage: FC = () => {
     <div className="flex flex-col items-center">
       <header className="flex flex-col justify-center h-dvh -mt-16">
         <Image
-          src="/evolution-sdk/evolution-sdk-no-witness-labs.png"
+          src="/lucid-evolution/evolution-sdk-no-witness-labs.png"
           alt="Evolution-SDK Logo"
           width={450}
           height={120}

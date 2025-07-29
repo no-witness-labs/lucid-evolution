@@ -15,6 +15,8 @@
   <img alt="NPM Version" src="https://img.shields.io/npm/v/%40evolution-sdk%2Flucid?color=%2350C62A">
 </p>
 
+> **⚠️ Disclaimer:** This is a maintained fork while we prepare for Evolution SDK 2.0. Current work focuses primarily on bug fixes and stability improvements.
+
 There are a growing number of projects that are built on top of `evolution-sdk`! If you've built a library or a project on top of evolution-sdk, tell me about it [on X](https://x.com/nowitnesslabs) or [on Discord](https://discord.gg/eqZDvHvW6k) . I'll add it below and tweet it out.
 
 <h3 align="center">Powered by Evolution SDK</span></h1>

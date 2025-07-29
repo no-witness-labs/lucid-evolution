@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "A Next.js 15 starter template for Evolution SDK",
   icons: {
     icon: [
-      { url: "/evolution-sdk-no-witness-labs.svg", type: "image/svg+xml" },
+      { url: "/lucid-evolution-no-witness-labs.svg", type: "image/svg+xml" },
     ],
     apple: [{ url: "/evolution-sdk-no-witness-labs.svg" }],
   },

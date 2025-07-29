@@ -24,14 +24,14 @@ export default function Footer() {
             <Image
               src={
                 !mounted
-                  ? "/evolution-sdk/no-witness-labs-logo.png"
+                  ? "/lucid-evolution/no-witness-labs-logo.png"
                   : resolvedTheme === "light"
-                    ? "/evolution-sdk/no-witness-labs-logo-dark.png"
+                    ? "/lucid-evolution/no-witness-labs-logo-dark.png"
                     : resolvedTheme === "dark"
-                      ? "/evolution-sdk/no-witness-labs-logo.png"
+                      ? "/lucid-evolution/no-witness-labs-logo.png"
                       : systemTheme === "light"
-                        ? "/evolution-sdk/no-witness-labs-logo-dark.png"
-                        : "/evolution-sdk/no-witness-labs-logo.png"
+                        ? "/lucid-evolution/no-witness-labs-logo-dark.png"
+                        : "/lucid-evolution/no-witness-labs-logo.png"
               }
               alt="No Witness Labs Logo"
               className="footer-logo "

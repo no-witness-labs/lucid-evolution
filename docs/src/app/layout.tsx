@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     // https://github.com/vercel/next.js/discussions/50189#discussioncomment-10826632
     canonical: "./",
   },
-  icons: "/evolution-sdk/no-witness-labs-icon.png",
+  icons: "/lucid-evolution/no-witness-labs-icon.png",
 };
 
 const RootLayout: FC<{ children: ReactNode }> = async ({ children }) => {
