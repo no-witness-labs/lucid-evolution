@@ -1,1 +1,1 @@
-export * from "./LucidEvolution.js";
+export * from "./EvolutionSDK.js";

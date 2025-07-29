@@ -1,5 +1,5 @@
 import { CML, makeReturn } from "../core.js";
-import { LucidConfig } from "../evolution-sdk/LucidEvolution.js";
+import { LucidConfig } from "../evolution-sdk/EvolutionSDK.js";
 import { OutputDatum } from "./types.js";
 import {
   Address,
